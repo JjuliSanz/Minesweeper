@@ -1,5 +1,5 @@
 import "./App.css";
-import { useContext, useEffect, useMemo, useState } from "react";
+import { useContext, useState } from "react";
 import Nav from "./components/Nav";
 import Time from "./components/Time";
 import Start from "./components/Start";
@@ -54,13 +54,8 @@ const generateBoard = (rows, cols, numMines) => {
 
 function App() {
   const [revealedMines, setRevealedMines] = useState([]);
-  const {
-    board,
-    difficulty,
-    setIsPlaying,
-    ended,
-    setEnded,
-  } = useContext(MineContext);
+  const { board, difficulty, setIsPlaying, ended, setEnded } =
+    useContext(MineContext);
 
   const revealMines = () => {
     // Update the state to mark the mines as revealed
@@ -112,7 +107,6 @@ function App() {
             </div>
             {/* PANEL */}
             <Panel revealMines={revealMines} revealedMines={revealedMines} />
-
           </div>
           {/* START BUTTON */}
           <Start generateBoard={generateBoard} />

@@ -2,16 +2,17 @@ import React, { useContext, useEffect } from "react";
 import { MineContext } from "../context/MineContext";
 
 const Points = () => {
-  const {numMines, points, setPoints, isPlaying, ended, difficulty} = useContext(MineContext);
+  const { points, setPoints, isPlaying, ended, difficulty } =
+    useContext(MineContext);
 
   useEffect(() => {
     if (ended === false) {
-      setPoints(0)
+      setPoints(0);
     }
-  }, [difficulty, isPlaying, ended])
+  }, [difficulty, isPlaying, ended]);
 
-    // Format seconds to two digits
-    const formattedPoints = points.toString().padStart(3, "0");
+  // Format seconds to two digits
+  const formattedPoints = points.toString().padStart(3, "0");
 
   return (
     <div
