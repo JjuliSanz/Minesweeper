@@ -83,7 +83,7 @@ function App() {
             }  h-[510px] border-8 border-r-gray-500 border-b-gray-500 border-l-gray-100 border-t-gray-100 flex flex-col items-center mt-2 sm:mt-4 p-4 `}
           >
             {/* Counter  */}
-            <div
+            <header
               className={`${
                 difficulty === "easy"
                   ? "w-[396px]"
@@ -104,7 +104,7 @@ function App() {
 
               {/* TIMER  */}
               <Time />
-            </div>
+            </header>
             {/* PANEL */}
             <Panel revealMines={revealMines} revealedMines={revealedMines} />
           </div>

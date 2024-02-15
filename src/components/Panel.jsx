@@ -6,7 +6,7 @@ const Panel = ({ revealMines, revealedMines }) => {
   const { board, difficulty } = useContext(MineContext);
 
   return (
-    <div
+    <main
       className={` ${
         difficulty === "easy"
           ? "grid grid-cols-10"
@@ -26,7 +26,7 @@ const Panel = ({ revealMines, revealedMines }) => {
           />
         </div>
       ))}
-    </div>
+    </main>
   );
 };
 
